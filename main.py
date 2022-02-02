@@ -7,6 +7,9 @@ API_KEY = os.environ.get("API_KEY")
 SHEETY_KEY = os.environ.get("SHEETY_AUTH")
 NUTRI_ENDPOINT = "https://trackapi.nutritionix.com/v2/natural/exercise"
 
+
+exercise_text = input("Tell me which exercises you did: ")
+
 headers = {
     "x-app-id": APP_ID,
     "x-app-key": API_KEY,
@@ -14,7 +17,7 @@ headers = {
 }
 
 n_params = {
-    "query": "ran 3 miles",
+    "query": exercise_text,
     "gender": "male",
     "weight_kg": 99.5,
     "height_cm": 186.64,
